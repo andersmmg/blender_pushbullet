@@ -59,7 +59,7 @@ def notify_render_cancel(dummy):
     
     blend_name = get_blend()
     
-    if addon_prefs.n_rendered:
+    if addon_prefs.n_cancelled:
         pb = Pushbullet(addon_prefs.api_key)
         push = pb.push_note("Render Cancelled", "%s cancelled rendering" % (blend_name))
 
